@@ -7,7 +7,7 @@ Find the original project [here](https://github.com/cubiq/sockjs-chat).
 
 Install SockJS, run the socket server:
 
-	node socket.js
+	node server.js
 
 Point your browser to index.html.
 
