@@ -1,0 +1,24 @@
+{
+  "name": "sockjs-chat",
+  "version": "0.0.0",
+  "description": "sockjs-chat ===========",
+  "main": "server.js",
+  "dependencies": {
+    "sockjs": "~0.3.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaredfaris/sockjs-chat"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaredfaris/sockjs-chat/issues"
+  },
+  "homepage": "https://github.com/jaredfaris/sockjs-chat"
+}
