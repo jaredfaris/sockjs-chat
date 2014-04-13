@@ -1,7 +1,9 @@
 sockjs-chat
 ===========
 
-Lame [SockJS](http://sockjs.org) chat demo.
+Lame [SockJS](http://sockjs.org) chat demo, modified from the original to compare against SignalR.
+
+Find the original project [here](https://github.com/cubiq/sockjs-chat).
 
 Install SockJS, run the socket server:
 
