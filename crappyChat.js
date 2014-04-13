@@ -31,9 +31,9 @@ window.crappyChat = function () {
     var updateChatName = function(name) {
         $('#chatterName').html(name);
     };
-    var addNewMessageToPage = function (name, message) {
+    var addNewMessageToPage = function (username, message) {
         // Add the message to the page. 
-        $('#discussion').append('<li>' + message + '</li>');
+        $('#discussion').append('<li><strong>' + username + '</strong>: ' + message + '</li>');
     };
 
     // What actually sends the message
@@ -46,7 +46,8 @@ window.crappyChat = function () {
 
             sock.send(JSON.stringify({
                 type: 'text',
-                message: message
+                message: message,
+                username: username
             }));
         });
     };
@@ -65,7 +66,7 @@ window.crappyChat = function () {
 //                appendMessage('system', 'A new user has joined');
                     break;
                 case 'message':
-                    addNewMessageToPage(data.id, data.message);
+                    addNewMessageToPage(data.username, data.message);
                     break;
                 case 'history':
 //                appendMessage('message', data.message);

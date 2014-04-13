@@ -34,7 +34,7 @@ function onConnection (conn) {
 			if ( buffer.length > 15 ) buffer.shift();
 			buffer.push(data.message);
 
-			broadcast({ type: 'message', message: data.message, id: conn.id });
+			broadcast({ type: 'message', message: data.message, username: data.username });
 		}
 
 		// TODO: add user name
