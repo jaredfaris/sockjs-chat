@@ -4,9 +4,7 @@ window.crappyChat = function () {
     console.log("Loading crappy chat");
 
     // Reference the sockjs server
-    var field = document.getElementById('message'),
-        chat = document.getElementById('chat'),
-        sock = new SockJS('http://localhost:9999/echo');
+    var sock = new SockJS('http://localhost:9999/echo');
 
     // Stuff that's not interesting
     var bindUsernameFormSubmit = function () {
@@ -63,17 +61,18 @@ window.crappyChat = function () {
 
             switch ( data.type ) {
                 case 'newUser':
-//                appendMessage('system', 'A new user has joined');
+                    //appendMessage('system', 'A new user has joined');
                     break;
                 case 'message':
                     addNewMessageToPage(data.username, data.message);
                     break;
                 case 'history':
-//                appendMessage('message', data.message);
-//                sockId = data.id;
+                    // This is how you'd handle different messages
+                    //appendMessage('message', data.message);
+                    //sockId = data.id;
                     break;
                 case 'userLeft':
-//                appendMessage('system', 'A user has left');
+                    //appendMessage('system', 'A user has left');
                     break;
             }
 
