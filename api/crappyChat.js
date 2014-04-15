@@ -4,7 +4,7 @@ window.crappyChat = function () {
     console.log("Loading crappy chat");
 
     // Reference the sockjs server
-    var sock = new SockJS('http://localhost:9999/echo');
+    var sock = new WebSocket("ws://127.0.0.1:9999");
 
     // Stuff that's not interesting
     var bindUsernameFormSubmit = function () {
