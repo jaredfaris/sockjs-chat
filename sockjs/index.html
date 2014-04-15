@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - CrappierChat</title>
+    <link href="styles.css" rel="stylesheet"/>
+
+    <script src="http://cdn.sockjs.org/sockjs-0.3.min.js"></script>
+    <script src="modernizr.js"></script>
+
+</head>
+<body>
+<div class="container body-content">
+
+
+
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <div class="account-wall">
+                <h4 class="form-signin-header">CrappierChat</h4>
+
+                <div id="registrationContainer">
+                    <form action="#" method="post" class="form-signin" role="form" id="registrationForm">
+                        <input class="form-control" name="username" placeholder="Username" type="text" id="username">
+                        <br>
+                        <div class="checkbox">
+                            <label for="notifyMe">Notify me when users login?</label>
+                            <input class="" type="checkbox" id="notifyMe" />
+                        </div>
+                        <br />
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">
+                            Register
+                        </button>
+                    </form>
+                </div>
+
+                <div id="chatContainer">
+                    <form action="#" method="POST" class="form-signin" id="newChatMessageForm">
+                        Your username: <span id="chatterName"></span>
+                        <br/>
+                        <input class="form-control" type="text" id="chatMessage" placeholder="Message" />
+                        <br />
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Post</button>
+                    </form>
+                    <div class="discussion-container">
+                        <ul id="discussion"></ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <br />
+    <div class="col-sm-6 col-md-4 col-md-offset-4">
+        <footer>
+            <p>Not Copywritten - CrappyChat</p>
+        </footer>
+    </div>
+</div>
+
+<script src="jquery.js"></script>
+
+<script src="bootstrap.js"></script>
+
+
+<script src="crappyChat.js"></script>
+
+
+<script>
+    var crappyChat = window.crappyChat();
+    crappyChat.initialize();
+</script>
+
+</body>
+</html>
