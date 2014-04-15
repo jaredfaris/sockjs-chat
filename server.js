@@ -51,4 +51,4 @@ webSockets = sockjs.createServer();
 webSockets.on('connection', onConnection);
 
 webSockets.installHandlers(server, { prefix:'/echo' } );
-server.listen(9999, '0.0.0.0');
+server.listen(9999, '127.0.0.1');
